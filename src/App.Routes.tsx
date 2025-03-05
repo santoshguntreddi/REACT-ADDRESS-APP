@@ -1,12 +1,13 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 import Addresses from "./pages/Addresses";
+import Home from "./pages/Home";
 
 const Routing: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/address" />} />
+        <Route path="/" Component={Home} />
         <Route path="/address" Component={Addresses} />
       </Routes>
     </BrowserRouter>
